@@ -1,0 +1,18 @@
+{% extends 'layout/basic.html' %}
+
+{% load django_bootstrap5 %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<<<<<<< Updated upstream
+    <h2>Регистрация нового пользователя</h2>
+=======
+    <h2>Регистрация нового пользователя {{ user.username }}</h2>
+>>>>>>> Stashed changes
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        {% bootstrap_button 'Зарегистрироваться' %}
+    </form>
+{% endblock %}
